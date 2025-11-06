@@ -5,12 +5,50 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="with=device-width, initial-scale=1.0">
         <title>Document</title>
-        <script src="script.js"></script> 
+        <link rel="stylesheet" href="style/style.css">
+
+        <script src="scripts/main.js" defer></script>
     </head>
     <body>
-        <div id="first">
-            <h1>JAVASCRIPT</h1>
-            <p>Un petit texte</p>
-        </div>
+        <header>
+            <h1>AzerType</h1>
+            <h2>L'application pour écrire plus vite !</h2>
+            <h3>Apprenez à taper plus vite au clavier en vous amusant 🚀</h3>
+        </header>
+
+        <main>
+            <div class="zoneOptions">
+                <p>Choisissez votre option et tapez la proposition qui s'affiche :</p>
+                <div class="optionSource">
+                    <label>
+                        <input type="radio" name="optionSource" id="mots" value="mots" checked>
+                        <span>Mots</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="optionSource" id="phrases" value="phrases">
+                        <span>Phrases</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="zoneProposition" id="zoneProposition">
+                Cliquez sur "Commencer" pour débuter !
+            </div>
+
+            <div class="zoneSaisie">
+                <input type="text" id="inputEcriture" placeholder="Tapez ici..." disabled>
+                <button id="btnValiderMot">Commencer</button>
+            </div>
+
+            <div class="zoneScore">
+                <div>Score : <span id="score">0</span> / <span id="total">0</span></div>
+                <div class="progress" id="progress">Progression : 0%</div>
+                <div class="feedback" id="feedback"></div>
+            </div>
+        </main>
+
+        <footer>
+            © 2024 AzerType - KouamefredDev
+        </footer>
     </body>
 </html>
